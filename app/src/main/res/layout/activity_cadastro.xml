@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0047BD"
+    tools:context=".CadastroActivity">
+
+    <View
+        android:id="@+id/modalLogin"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tituloLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="CADASTRO LIVRO"
+        android:textColor="#595959"
+        app:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toTopOf="@+id/modalLogin" />
+
+    <TextView
+        android:id="@+id/labelTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="Título"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tituloLogin" />
+
+    <EditText
+        android:id="@+id/inputTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/labelTitulo"
+        app:drawableTint="#595959"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/labelSinopse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="Sinopse"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputTitulo" />
+
+    <EditText
+        android:id="@+id/inputSinopse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/labelSinopse"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/labelEditora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="Editora"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputSinopse" />
+
+    <EditText
+        android:id="@+id/inputEditora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/labelEditora"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/inputAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="Ano"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditora" />
+
+    <Button
+        android:id="@+id/entrarButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Escolher foto"
+        android:textColor="#ffffff"
+        app:backgroundTint="#0047BD"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputAno" />
+
+    <Button
+        android:id="@+id/entrarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Cadastrar"
+        android:textColor="#ffffff"
+        app:backgroundTint="#0047BD"
+        app:layout_constraintBottom_toBottomOf="@+id/modalLogin"
+        app:layout_constraintEnd_toEndOf="@+id/modalLogin"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toBottomOf="@+id/entrarButton2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textSize="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/labelTitulo"
+        app:layout_constraintEnd_toStartOf="@+id/tituloLogin"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/modalLogin"
+        app:layout_constraintTop_toTopOf="@+id/modalLogin"
+        app:layout_constraintVertical_bias="0.259" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
