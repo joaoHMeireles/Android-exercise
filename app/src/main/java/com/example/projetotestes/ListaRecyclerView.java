@@ -2,6 +2,7 @@ package com.example.projetotestes;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,15 +33,21 @@ public class ListaRecyclerView extends RecyclerView.Adapter{
         Livro item = this.itens.get(position);
 
         listaHolder.getTitulo().setText(item.getTitulo());
+        listaHolder.getFoto().setImageResource(item.getFoto());
 
         listaHolder.getItemLivro().setOnClickListener(v -> {
             Intent intent = new Intent(context, InfoLivroActivity.class);
-            intent.putExtra("titulo", item.getTitulo());
-            intent.putExtra("sinopse", item.getSinopse());
-            intent.putExtra("editora", item.getEditora());
-            intent.putExtra("ano", item.getAno());
-            intent.putExtra("isbn", item.getIsbn());
-            intent.putExtra("foto", item.getFoto());
+            Bundle bundle = new Bundle();
+
+            bundle.putString("titulo", item.getTitulo());
+            bundle.putString("sinopse", item.getSinopse());
+            bundle.putString("editora", item.getEditora());
+            bundle.putInt("ano", item.getAno());
+            bundle.putInt("isbn", item.getIsbn());
+            bundle.putInt("foto", item.getFoto());
+
+            intent.putExtras(bundle);
+
             context.startActivity(intent);
         });
 

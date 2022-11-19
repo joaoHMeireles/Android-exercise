@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EscolherFotoActivity">
+
+    <ImageView
+        android:id="@+id/imagemEscolhida"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagemEscolhida" />
+
+    <ImageView
+        android:id="@+id/imagem1"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@drawable/imagem1" />
+
+    <ImageView
+        android:id="@+id/imagem2"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toEndOf="@+id/imagem1"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@drawable/imagem2" />
+
+    <ImageView
+        android:id="@+id/imagem3"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toEndOf="@+id/imagem2"
+        app:layout_constraintTop_toBottomOf="@+id/imagemEscolhida"
+        app:srcCompat="@drawable/imagem3" />
+
+    <ImageView
+        android:id="@+id/imagem4"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagem1"
+        app:srcCompat="@drawable/imagem4" />
+
+    <ImageView
+        android:id="@+id/imagem5"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toEndOf="@+id/imagem4"
+        app:layout_constraintTop_toBottomOf="@+id/imagem2"
+        app:srcCompat="@drawable/imagem5" />
+
+    <ImageView
+        android:id="@+id/imagem6"
+        android:layout_width="114dp"
+        android:layout_height="185dp"
+        app:layout_constraintStart_toEndOf="@+id/imagem5"
+        app:layout_constraintTop_toBottomOf="@+id/imagem2"
+        app:srcCompat="@drawable/imagem6" />
+
+    <Button
+        android:id="@+id/botaoVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botaoEscolher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Escolher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

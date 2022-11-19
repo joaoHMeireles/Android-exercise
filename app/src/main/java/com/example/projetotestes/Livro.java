@@ -1,10 +1,10 @@
 package com.example.projetotestes;
 
 public class Livro {
-    private String titulo, sinopse, editora, foto;
-    private Integer ano, isbn;
+    private String titulo, sinopse, editora;
+    private Integer ano, isbn, foto;
 
-    public Livro(String titulo, String sinopse, String editora, String foto, Integer ano, Integer isbn) {
+    public Livro(String titulo, String sinopse, String editora, Integer foto, Integer ano, Integer isbn) {
         this.titulo = titulo;
         this.sinopse = sinopse;
         this.editora = editora;
@@ -45,11 +45,11 @@ public class Livro {
         this.editora = editora;
     }
 
-    public String getFoto() {
+    public Integer getFoto() {
         return foto;
     }
 
-    public void setFoto(String foto) {
+    public void setFoto(Integer foto) {
         this.foto = foto;
     }
 

@@ -15,18 +15,18 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Button botaoCadastrar;
-    private List<Livro> listaLivros;
+    private static List<Livro> listaLivros;
     private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         recyclerView = findViewById(R.id.recyclerView);
         botaoCadastrar = findViewById(R.id.botaoCadastrar);
         botaoCadastrar.setOnClickListener(v -> irCadastro());
-
-        this.listaLivros = new ArrayList<>();
+        listaLivros = new ArrayList<>();
 
         setInfoPeca();
         setAdaptador();
@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void irCadastro() {
         Intent intent = new Intent(this, CadastroActivity.class);
+        Bundle bundle = new Bundle();
+
+        bundle.putInt("idFoto", -1);
+        intent.putExtras(bundle);
+
         startActivity(intent);
     }
 
@@ -46,8 +51,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setInfoPeca() {
-        listaLivros.add(new Livro("Harry Potter", "Maguinho chato numas aventuras contra calvo das trevas", "Tilibras", 2000, 1 ));
-        listaLivros.add(new Livro("O Pequeno Príncipe", "Te faz pensar na vida, mas não muito", "Educa", 2013, 2 ));
-        listaLivros.add(new Livro("Diário de um banana - 10", "Menino bulinado pela familia, pelos amigos...", "Arqueiro", 2020, 3 ));
+        listaLivros.add(new Livro("Harry Potter", "Maguinho chato numas aventuras contra calvo das trevas", "Tilibras", R.drawable.imagem1, 2000, 1 ));
+        listaLivros.add(new Livro("O Pequeno Príncipe", "Te faz pensar na vida, mas não muito", "Educa",R.drawable.imagem4 ,2013, 2 ));
+        listaLivros.add(new Livro("Diário de um banana - 10", "Menino bulinado pela familia, pelos amigos...", "Arqueiro", R.drawable.imagem5, 2020, 3 ));
+    }
+
+    public static void addLista(Livro livro){
+        listaLivros.add(livro);
+    }
+
+    public static void deleteFromLista(Integer index){
+        listaLivros.remove(index);
+    }
+
+    public static Integer proximoIsbn(){
+        Integer proximoIsbn = 0;
+        for(int i = 0; i < listaLivros.size(); i++){
+            if(listaLivros.get(i).getIsbn() > proximoIsbn){
+                proximoIsbn = listaLivros.get(i).getIsbn();
+            }
+        }
+        return proximoIsbn + 1;
     }
 }

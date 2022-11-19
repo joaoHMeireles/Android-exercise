@@ -28,6 +28,11 @@
             android:name=".InfoLivroActivity"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name="EscolherFotoActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

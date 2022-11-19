@@ -7,31 +7,8 @@
     android:background="#ffffff"
     tools:context=".InfoLivroActivity">
 
-    <TextView
-        android:id="@+id/sinopseText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:autoSizeTextType="uniform"
-        android:maxWidth="340dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sinopseTitle" />
-
-    <TextView
-        android:id="@+id/sinopseTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
-        android:text="Sinopse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sinopseText" />
-
-    <View
-        android:id="@+id/modalLogin"
+    <ImageView
+        android:id="@+id/foto"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="32dp"
@@ -45,9 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/modalLogin"
+        android:textColor="#595959"
+        android:textSize="22dp"
+        app:layout_constraintStart_toEndOf="@+id/foto"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -57,8 +36,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
         android:text="Sinopse"
+        android:textColor="#595959"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modalLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/foto" />
 
     <TextView
         android:id="@+id/sinopseText"
@@ -68,9 +48,94 @@
         android:autoSizeTextType="uniform"
         android:maxWidth="340dp"
         android:text="TextView"
+        android:textColor="#595959"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sinopseTitle" />
+
+    <TextView
+        android:id="@+id/editoraTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="Editora"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sinopseText" />
+
+    <TextView
+        android:id="@+id/editoraText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:maxWidth="340dp"
+        android:text="TextView"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editoraTitle" />
+
+    <TextView
+        android:id="@+id/anoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="Ano"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editoraText" />
+
+    <TextView
+        android:id="@+id/anoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:maxWidth="340dp"
+        android:text="TextView"
+        android:textColor="#595959"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anoTitle" />
+
+    <TextView
+        android:id="@+id/isbnTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="ISBN"
+        android:textColor="#595959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anoText" />
+
+    <TextView
+        android:id="@+id/isbnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textColor="#595959"
+        app:layout_constraintStart_toEndOf="@+id/isbnTitle"
+        app:layout_constraintTop_toBottomOf="@+id/anoText" />
+
+    <Button
+        android:id="@+id/voltarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Voltar"
+        android:textColor="#ffffff"
+        android:background="#0047BD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
