@@ -10,14 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class ListaRecyclerView extends RecyclerView.Adapter{
+public class ListaRecyclerView extends RecyclerView.Adapter {
 
     private List<Livro> itens;
     private Context context;
+    private RecyclerViewInterface recyclerViewInterface;
 
-    ListaRecyclerView(List<Livro> itens, Context context){
+    ListaRecyclerView(List<Livro> itens, Context context, RecyclerViewInterface recyclerViewInterface){
         this.itens = itens;
         this.context = context;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
@@ -52,7 +54,13 @@ public class ListaRecyclerView extends RecyclerView.Adapter{
         });
 
         listaHolder.getDelete().setOnClickListener(v -> {
+            if(recyclerViewInterface != null ){
+                int newPosition = holder.getAdapterPosition();
 
+                if(newPosition != RecyclerView.NO_POSITION){
+                    recyclerViewInterface.onClickItem(newPosition);
+                }
+            }
         });
     }
 

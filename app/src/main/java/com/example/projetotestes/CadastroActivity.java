@@ -58,7 +58,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                 System.out.println(livro);
 
-                MainActivity.addLista(livro);
+                MainActivity.listaLivros.add(livro);
 
                 voltarMain();
             }
